@@ -34,7 +34,12 @@
   button {
     @apply cursor-pointer;
   }
-  .bg-photo-gradient {
+
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .bg-gradient {
     @apply bg-linear-to-t from-background/50 via-surface/15 to-accent/15;
   }
 }
