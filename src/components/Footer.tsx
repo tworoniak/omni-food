@@ -1,0 +1,49 @@
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  return (
+    <>
+      <footer>
+        <div className='flex flex-col md:flex-row justify-center md:justify-between items-center mt-4'>
+          {/* <p className='text-subtle text-2xl uppercase font-bold text-center mb-8 md:mb-0'>
+            Thomas Woroniak Photography
+          </p> */}
+          {/* <div className='flex gap-4'>
+          <Link
+            to='https://linktr.ee/antiherophotos'
+            target='_blank'
+            className='hover:text-accent transition'
+          >
+            <SiLinktree />
+          </Link>
+          <Link
+            to='https://www.instagram.com/antiherophotos/'
+            target='_blank'
+            className='hover:text-accent transition'
+          >
+            <FaInstagram />
+          </Link>
+          <Link
+            to='https://www.facebook.com/AntiHeroPhotos'
+            target='_blank'
+            className='hover:text-accent transition'
+          >
+            <FaFacebookSquare />
+          </Link>
+          <Link
+            to='https://www.linkedin.com/in/thomasworoniak1/'
+            target='_blank'
+            className='hover:text-accent transition'
+          >
+            <FaLinkedin />
+          </Link> 
+        </div>*/}
+        </div>
+        <p className='text-xs md:text-sm text-gray-400 text-center py-4'>
+          &copy; {currentYear} OmniFood. All rights reserved.
+        </p>
+      </footer>
+    </>
+  );
+};
+
+export default Footer;

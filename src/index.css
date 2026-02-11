@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import 'tailwindcss';
+@tailwind utilities;
+
+@config "../tailwind.config.js";
+
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+*/
+
+/* Global styles for html/body */
+@layer base {
+  html {
+    @apply bg-background text-text;
+  }
+  body {
+    @apply leading-none font-normal;
+  }
+}
+
+/* Optional utility for subtle photo hover effect */
+@layer components {
+  .photo-hover {
+    @apply transition-transform duration-300 hover:scale-[1.02];
+  }
+}
+
+@layer utilities {
+  button {
+    @apply cursor-pointer;
+  }
+  .bg-photo-gradient {
+    @apply bg-linear-to-t from-background/50 via-surface/15 to-accent/15;
+  }
+}
+
+* {
+  /* padding: 0;
+  margin: 0; */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+.hero {
+  margin: 0 auto;
+}
+
+/* Scroll to top */
+
+.scroll-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* border: none; */
+  cursor: pointer;
+  /* background-color: #666; */
+  color: white;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px) scale(0.95);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-to-top {
+    transition: none;
+  }
+}
